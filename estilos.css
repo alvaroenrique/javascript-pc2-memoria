@@ -1,14 +1,35 @@
-html, body, .login {
+html,
+body,
+.login {
     width: 100%;
     height: 100%;
 }
-.logo{
+
+.logo {
     width: 170px;
     height: 170px;
 }
-.ingrese{
+
+.ingrese {
     width: 250px;
 }
-.botones{
+
+.botones {
     width: 250px;
+}
+
+.tablero {
+    width: 902px;
+    height: 540px;
+}
+
+.cuad {
+    width: 300px;
+    height: 270px;
+    background: peru;
+    border: 1px solid white;
+}
+
+.derecha {
+    height: 100%;
 }
