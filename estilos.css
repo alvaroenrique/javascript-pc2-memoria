@@ -21,15 +21,24 @@ body,
 .tablero {
     width: 902px;
     height: 540px;
+    border: 1px solid red;
 }
 
 .cuad {
     width: 300px;
     height: 270px;
-    background: peru;
-    border: 1px solid white;
+    border: 1px solid red;
 }
-
 .derecha {
     height: 100%;
+}
+
+
+.peru{
+    animation: col 2s;
+}
+@keyframes col{
+    25% {background: peru}
+    75% {background: peru}
+    100% {background: white}
 }
