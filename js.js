@@ -21,21 +21,43 @@ var memoria = function () {
         var turno = document.getElementById("turno");
         var len = 1;
         var intervalo_turno = 2;
-        var turn = 2;
+        var turn = 1;
+        var sel_temp = [];
+        var click_temp = 0;
 
         //var selec_temp;
 
         this.tablero.forEach(function (el) {      
             el.addEventListener("click", function () {
                 seleccionados.push(el.id);
-                console.log(seleccionados)
-                //si len=1 → turn=2| len=3 → turn=3| len=6 → turn=4| len=10 → turn=5| len=15 → turn=6|
+                //console.log(seleccionados)
+
+                //si len=1 → turn=1| len=3 → turn=2| len=6 → turn=3| len=10 → turn=4| len=15 → turn=5| (len es el numero de click en cada turno)
+                // len → turno
                 // len avanza en intervalos de +2 ,+3, +4, +5 ,+6
                 if(seleccionados.length == len){
-                    turno.textContent = "Turno " + turn;
+                    turno.textContent = "Turno " + (turn+1);
                     len = len + intervalo_turno;
                     turn +=1;
                     intervalo_turno +=1;
+                    sel_temp.push(el.id);
+                    console.log(sel_temp);
+                    click_temp = 0
+                }
+                else{
+                    if(sel_temp[click_temp] == el.id){
+                        //console.log("ESTAS GANANDO")
+                    }
+                    else{
+                        console.log("perdiste");
+                        console.log("Turno perdido : "+turno.textContent);
+                        var tiempo = document.getElementById("counter");
+                        console.log("segundo: "+ tiempo.textContent)
+                        var tab = document.getElementById("tab");
+                        tab.classList.add("lose");
+                        
+                    }
+                    click_temp +=1;
                 }
             })
         });

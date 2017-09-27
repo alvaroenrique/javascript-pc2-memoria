@@ -42,3 +42,8 @@ body,
     75% {background: peru}
     100% {background: white}
 }
+
+.lose{
+    background: peru;
+
+}
