@@ -36,24 +36,6 @@ var memoria = function () {
                     len = len + intervalo_turno;
                     turn +=1;
                     intervalo_turno +=1;
-
-                    /*
-                    if(seleccionados.length == 1){
-                        selec_temp = seleccionados;
-                    }
-                    if(seleccionados.length >= 3){
-                        var lose = false;
-                        var n_index = 1;
-                        var sr = seleccionados.reverse();
-                        var tr = selec_temp.reverse();
-                        for (var i = 0; i < n_index; i++) {
-                            if(sr[i+1] == tr[i]){
-                                lose = false;
-                                console.log("asdasd");
-                            }
-                            else{ lose = true; console.log("PERDISTE") }
-                        }
-                    }*/
                 }
             })
         });
