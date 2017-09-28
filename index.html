@@ -8,15 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Uso de libreria animate css, para ponerle animaciones a la pagina -->
+    <link rel="stylesheet" href="animate.css">
   </head>
   <body>
-    <div class="login d-flex justify-content-center align-items-center flex-column">
+    <div class="login d-flex justify-content-center align-items-center flex-column animated bounceInDown">
       <div class="d-flex justify-content-center align-items-center flex-column">
         <img class="logo mb-4" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png" alt="">
-        <input class="ingrese form-control mb-3" type="text" placeholder="Ingrese su usuario">
+        <input class="ingrese form-control mb-3" type="text" placeholder="Ingrese su usuario" id="jugador">
         <div class="botones d-flex justify-content-between mb-4">
             <a href="tablero.html">
-              <button type="button" class="btn btn-warning">Comenzar</button>
+              <button type="button" class="btn btn-warning" id="comenzar">Comenzar</button>
             </a>
             <button type="button" class="btn btn-warning">Highscores</button>
         </div>
@@ -29,7 +31,7 @@
 
 
     
-
+    <script src="index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
