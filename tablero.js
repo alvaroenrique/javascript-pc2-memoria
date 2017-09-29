@@ -56,6 +56,23 @@ var memoria = function () {
                         var tab = document.getElementById("tab");
                         tab.classList.add("lose");
                         
+                        // Aqui se debe ingresar los puntajes al localStorage
+                        if(JSON.parse(localStorage.data).lc_tiempo){
+
+                        }else{
+                            var tiempos = [jugador];
+                            var mytiempo = {
+                                tiempo : tiempos
+                            };
+                            localStorage.setItem("tiempo", JSON.stringify(mytiempo));
+                        }
+
+                        if(JSON.parse(localStorage.data).lc_turno){
+
+                        }else{
+
+                        }
+                        
                     }
                     click_temp +=1;
                 }
