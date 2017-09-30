@@ -55,3 +55,13 @@ body,
 .memo{
     width: 400px;
 }
+
+#nombre:hover{
+    background: #C25D5D;
+}
+#tiempo:hover{
+    background: #3FE9A8;
+}
+#turno:hover{
+    background: #A66AEB;
+}
