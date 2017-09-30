@@ -57,20 +57,28 @@ var memoria = function () {
                         tab.classList.add("lose");
                         
                         // Aqui se debe ingresar los puntajes al localStorage
-                        if(JSON.parse(localStorage.data).lc_tiempo){
+                        if(JSON.parse(localStorage.data).tiempo){
+                            var mydata = JSON.parse(localStorage.getItem("data"));
+                            mydata.tiempo.push(document.getElementById("counter").textContent);
+                            localStorage.setItem("data", JSON.stringify(mydata));
 
                         }else{
-                            var tiempos = [jugador];
-                            var mytiempo = {
-                                tiempo : tiempos
-                            };
-                            localStorage.setItem("tiempo", JSON.stringify(mytiempo));
+                            var mydata = JSON.parse(localStorage.getItem("data"));
+                            var tiempo_db = [document.getElementById("counter").textContent];
+                            mydata.tiempo = tiempo_db;
+                            localStorage.setItem("data", JSON.stringify(mydata));
                         }
 
-                        if(JSON.parse(localStorage.data).lc_turno){
+                        if(JSON.parse(localStorage.data).turno){
+                            var mydata = JSON.parse(localStorage.getItem("data"));
+                            mydata.turno.push(document.getElementById("turno").textContent);
+                            localStorage.setItem("data", JSON.stringify(mydata));
 
                         }else{
-
+                            var mydata = JSON.parse(localStorage.getItem("data"));
+                            var turno_db = [document.getElementById("turno").textContent];
+                            mydata.turno = turno_db;
+                            localStorage.setItem("data", JSON.stringify(mydata));
                         }
                         
                     }
@@ -94,16 +102,14 @@ var memoria = function () {
             }
         };
         setInterval(incrementarContador, 1000);
-        /*
-        document.getElementById("button").addEventListener("click", e => {
-          clicked = true;
-        });
-        */
+
     }
     this.start = function(){
         this.pintar();
         this.cronometro();
         this.turnos();
+        document.getElementById("jugador").innerHTML = 
+        JSON.parse(localStorage.getItem("data")).nombre[JSON.parse(localStorage.getItem("data")).nombre.length-1];
     }
     
 

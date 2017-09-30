@@ -38,12 +38,20 @@ body,
     animation: col 2s;
 }
 @keyframes col{
-    25% {background: peru}
-    75% {background: peru}
+    25% {background: #FF7B00}
+    75% {background: #FF7B00}
     100% {background: white}
 }
 
 .lose{
-    background: peru;
+    background: #FF7B00;
 
+}
+
+.plomo{
+    background: gray;
+    color: white;
+}
+.memo{
+    width: 400px;
 }

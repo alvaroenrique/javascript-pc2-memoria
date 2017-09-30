@@ -16,40 +16,39 @@
 
 <body>
     <div class="container-fluid plomo">
-        <h1 class="memo mb-4 p-3 animated infinite pulse">Memoria Ulima</h1>
+        <h1 class="mb-4 p-3 animated bounceInLeft">Highscores</h1>
     </div>
     <div class="container">
-
-        <div class="row ">
-            <div class="col">
-                <h2 id="jugador">jugador</h2>
-                <div class="tablero d-flex flex-wrap mt-4" id="tab">
-                    <div class="cuad" id="c_1"></div>
-                    <div class="cuad" id="c_2"></div>
-                    <div class="cuad" id="c_3"></div>
-                    <div class="cuad" id="c_4"></div>
-                    <div class="cuad" id="c_5"></div>
-                    <div class="cuad" id="c_6"></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="d-flex flex-column justify-content-between derecha">
-                    <div class="">
-                        <p class="mt-4" id="counter">0</p>
-                    </div>
-                    <div class="">
-                        <p id="turno">Turno 1</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="row">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
+    </div>
 
 
 
 
 
-        <script src="tablero.js"></script>
+        <script src="high.js"></script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -58,7 +57,7 @@
             crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
             crossorigin="anonymous"></script>
-
+        
 </body>
 
 </html>
